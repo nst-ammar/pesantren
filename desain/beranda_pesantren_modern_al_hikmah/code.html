@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#2a6a3f", "inverse-on-surface": "#eff1ee", "secondary-fixed": "#84fe58", "lime-vibrant": "#70e000", "on-primary": "#ffffff", "surface-container": "#eceeeb", "gold-accent": "#c59b27", "secondary-container": "#84fe58", "secondary-fixed-dim": "#69e03e", "on-tertiary-container": "#60c14f", "outline": "#707970", "tertiary-fixed-dim": "#7add66", "on-surface-variant": "#404941", "surface-container-highest": "#e1e3e0", "secondary": "#206d00", "surface-bright": "#f8faf7", "inverse-surface": "#2e312f", "on-tertiary-fixed-variant": "#005300", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002200", "surface-dim": "#d8dbd8", "charcoal-ink": "#142118", "surface-container-high": "#e7e9e6", "primary-container": "#004b23", "forest-rich": "#008000", "surface-variant": "#e1e3e0", "primary-fixed": "aef2bb", "tertiary": "#003300", "background": "#f8faf7", "surface-container-low": "#f2f4f1", "inverse-primary": "#93d6a0", "ivory-pure": "#ffffff", "on-secondary-fixed-variant": "#165200", "on-primary-fixed-variant": "#0b5229", "emerald-deep": "#006400", "on-surface": "#191c1b", "lime-tint": "#ccff33", "tertiary-container": "#004c00", "on-tertiary": "#ffffff", "lime-glow": "#9ef01a", "primary": "#003215", "on-error-container": "#93000a", "outline-variant": "#c0c9be", "on-primary-container": "#79bb87", "on-primary-fixed": "#00210c", "on-background": "#191c1b", "surface": "#f8faf7", "primary-fixed-dim": "#93d6a0", "on-error": "#ffffff", "error-container": "#ffdad6", "error": "#ba1a1a", "slate-tint": "#eef2eb", "on-secondary": "#ffffff", "tertiary-fixed": "#96fa7f", "on-secondary-container": "#227400", "on-secondary-fixed": "#052100" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem", "space-md": "1rem", "margin-tablet": "2rem", "margin": "4rem", "gutter-mobile": "1rem" }, "fontFamily": { "display-hero-mobile": [ "Playfair Display" ], "headline-sm": [ "Playfair Display" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Playfair Display" ], "label-md": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Playfair Display" ], "label-lg": [ "Plus Jakarta Sans" ], "title-md": [ "Plus Jakarta Sans" ], "display-hero": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "headline-lg": [ "Playfair Display" ] }, "fontSize": { "display-hero-mobile": [ "2.25rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "1.5rem", { "lineHeight": "1.35", "fontWeight": "600" } ], "body-sm": [ "0.875rem", { "lineHeight": "1.5", "fontWeight": "400" } ], "headline-lg-mobile": [ "1.875rem", { "lineHeight": "1.25", "fontWeight": "600" } ], "label-md": [ "0.75rem", { "lineHeight": "1.3", "letterSpacing": "0.04em", "fontWeight": "600" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.6", "fontWeight": "400" } ], "headline-md": [ "2rem", { "lineHeight": "1.3", "fontWeight": "600" } ], "label-lg": [ "0.875rem", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600" } ], "title-md": [ "1.25rem", { "lineHeight": "1.4", "fontWeight": "600" } ], "display-hero": [ "3.75rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "1rem", { "lineHeight": "1.55", "fontWeight": "400" } ], "headline-lg": [ "2.75rem", { "lineHeight": "1.2", "letterSpacing": "-0.015em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,75,35,0.06)]"><div class="bg-primary-container text-on-primary px-margin-mobile md:px-margin-tablet lg:px-margin"><div class="max-w-7xl mx-auto h-10 flex items-center justify-between font-label-md text-label-md"><div class="flex items-center gap-space-sm"><span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-forest-rich text-on-primary font-label-md text-label-md uppercase tracking-wider">PSB 2025/2026</span><span class="hidden sm:inline font-body-sm text-body-sm text-on-primary">Penerimaan Santri Baru Gelombang 1 Resmi Dibuka</span></div><div class="flex items-center gap-space-lg text-on-primary/90 font-label-md text-label-md"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">call</span><span>WhatsApp: +62 812-3456-7890</span></span><span class="hidden md:flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">mail</span><span>psb@alhikmah.sch.id</span></span></div></div></div><div class="px-margin-mobile md:px-margin-tablet lg:px-margin"><div class="max-w-7xl mx-auto h-20 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="Logo Pesantren Al-Hikmah" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHSq7xe8QQjep2ZdkmmPeVbPbqKjDUNV-sICI2tZGGu3IiJTtsiDwvuNnqOGyuddtemros2WHN0YfNOISaU2cspAlq1dcwmGZBDkp7E4bdgz4mvgq88u0qx02TM6A4FwYHsUpElzQ7_kKEtUqDn02SF8ZhsdhOZearyM9sAtqHs-kyu6lAJnQ4arLTZ8BufpnjNPJk6Dpf6Jfwwz_qWTf3GPC5DGCzQWZS6Hq5wXFv0gc2KMmppyun"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-primary leading-tight">Pesantren Modern</span><span class="font-label-md text-label-md tracking-wider text-surface-tint uppercase font-bold">Al-Hikmah</span></div></div><nav class="hidden xl:flex items-center gap-space-xs font-label-lg text-label-lg" data-active-classes="text-primary font-bold bg-surface-container-high rounded-lg"><a aria-current="page" class="px-3 py-2 transition-colors text-primary font-bold bg-surface-container-high rounded-lg" data-path="beranda" href="#">Beranda</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors" data-path="profil-sejarah" href="#">Profil &amp; Sejarah</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors" data-path="program-pendidikan" href="#">Program Pendidikan</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors" data-path="fasilitas" href="#">Fasilitas</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors" data-path="info-psb-biaya" href="#">Info PSB &amp; Biaya</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors" data-path="galeri-berita" href="#">Galeri &amp; Berita</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors" data-path="faq" href="#">FAQ</a><a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors" data-path="kontak" href="#">Kontak</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center h-10 px-space-lg rounded-lg bg-forest-rich hover:bg-emerald-deep text-on-primary font-label-lg text-label-lg font-semibold shadow-[0_4px_14px_rgba(0,75,35,0.2)] transition-all hover:shadow-[0_6px_20px_rgba(0,100,0,0.3)]" data-path="pendaftaran-online" href="#">Daftar PSB Online</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-[7.5rem] bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-primary-container text-on-primary">
+<!-- Subtle Ambient Glow & Islamic Geo Vector -->
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-secondary-fixed opacity-10 blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 -left-20 w-80 h-80 rounded-full bg-lime-vibrant opacity-10 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl lg:py-24 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Hero Copy -->
+<div class="lg:col-span-7 flex flex-col space-y-space-md">
+<div class="inline-flex items-center gap-space-xs self-start px-3.5 py-1.5 rounded-full bg-forest-rich/40 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-lime-vibrant animate-ping"></span>
+<span class="font-label-md text-label-md tracking-wider text-lime-tint uppercase font-bold">Penerimaan Santri Baru TA 2025/2026</span>
+</div>
+<h1 class="font-display-hero text-headline-lg lg:text-display-hero tracking-tight text-ivory-pure font-bold leading-tight">
+            Mencetak Generasi Qur'ani, Berakhlak Karimah &amp; Berwawasan Global
+          </h1>
+<p class="font-body-lg text-body-lg text-on-primary/90 max-w-2xl leading-relaxed">
+            Pesantren Modern Al-Hikmah memadukan kurikulum salafiyah kitab kuning, tahfiz 30 juz ber-sanad, dan pendidikan formal sains berstandar nasional di lingkungan asri perbukitan Cisarua.
+          </p>
+<!-- Dual CTA -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center h-12 px-space-lg rounded-lg bg-secondary hover:bg-forest-rich text-on-primary font-label-lg text-label-lg font-bold shadow-xl transition-all duration-200" href="#psb">
+<span class="material-symbols-outlined mr-2 text-[20px]">how_to_reg</span>
+              Daftar Santri Baru (PSB 2025/2026)
+            </a>
+<a class="inline-flex items-center justify-center h-12 px-space-lg rounded-lg bg-ivory-pure/10 hover:bg-ivory-pure/20 text-on-primary font-label-lg text-label-lg font-semibold backdrop-blur-sm transition-all duration-200" href="#kurikulum">
+<span class="material-symbols-outlined mr-2 text-[20px]">download</span>
+              Unduh Brosur &amp; Kurikulum
+            </a>
+</div>
+<!-- Key Highlights Badges Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-lg">
+<div class="p-3.5 rounded-xl bg-ivory-pure/5 backdrop-blur-sm">
+<div class="font-display-hero text-title-md font-bold text-lime-tint">100%</div>
+<p class="font-body-sm text-body-sm text-on-primary/80 mt-1">Lulus PTN &amp; Timur Tengah</p>
+</div>
+<div class="p-3.5 rounded-xl bg-ivory-pure/5 backdrop-blur-sm">
+<div class="font-display-hero text-title-md font-bold text-lime-tint">30 Juz</div>
+<p class="font-body-sm text-body-sm text-on-primary/80 mt-1">Tahfidz Center Bersanad</p>
+</div>
+<div class="p-3.5 rounded-xl bg-ivory-pure/5 backdrop-blur-sm">
+<div class="font-display-hero text-title-md font-bold text-lime-tint">15+</div>
+<p class="font-body-sm text-body-sm text-on-primary/80 mt-1">Ekstrakurikuler Pilihan</p>
+</div>
+<div class="p-3.5 rounded-xl bg-ivory-pure/5 backdrop-blur-sm">
+<div class="font-display-hero text-title-md font-bold text-lime-tint">Predikat A</div>
+<p class="font-body-sm text-body-sm text-on-primary/80 mt-1">Akreditasi Unggul BAN-S/M</p>
+</div>
+</div>
+</div>
+<!-- Hero Visual Mockup -->
+<div class="lg:col-span-5 relative">
+<div class="relative mx-auto max-w-md lg:max-w-none">
+<div class="overflow-hidden rounded-2xl shadow-2xl bg-surface-container">
+<img class="w-full h-[460px] object-cover transition-transform duration-700 hover:scale-105" data-alt="Santri berkopiah putih dan mukena rapi sedang berdiskusi membawa Al-Qur'an dan tablet digital di selasar megah masjid modern berarsitektur islami kontemporer dengan latar rimbun pepohonan pinus hijau di Cisarua, pencahayaan alami pagi hari keemasan, komposisi sinematik hangat bernuansa hijau botol dan putih bersih." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTEEHP-K4CKKSPF_YLMMuZd72dE1tE1-7f1PQE_H0aJIDB7ncxV-5KX_eAX2EE5kXmghM_66qZ6aNA6CvKgzxt7m3SjFvx7wSKcD65qHIixQI5PToDomtAmW-9mF6MWEseQjZrzg1s3PpAU_nLUKE5bIf8tAz50_WyAHqAx09ln9NFaAztEIzEMDo3LUmnPEdMB9_-meG-oZ91YRkziiNN1kCkVzTC_ir-m2xq4OP9qPiABI3metU7"/>
+</div>
+<!-- Floating Info Pill -->
+<div class="absolute -bottom-6 -left-4 sm:left-4 bg-surface-container-lowest p-space-md rounded-xl shadow-xl flex items-center gap-space-sm max-w-xs">
+<div class="w-12 h-12 rounded-lg bg-surface-tint flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="min-w-0">
+<div class="font-title-md text-body-md font-bold text-primary truncate">Sanad Mutashil</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Talaqqi Bersambung Rasulullah SAW</p>
+</div>
+</div>
+<!-- Floating Pill Right -->
+<div class="hidden sm:flex absolute -top-4 -right-4 bg-primary text-on-primary px-4 py-2.5 rounded-lg shadow-lg items-center gap-2">
+<span class="material-symbols-outlined text-lime-glow text-[18px]">public</span>
+<span class="font-label-md text-label-md font-semibold tracking-wide">Bilingual Arabic-English</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SAMBUTAN & TRIJIWA SECTION -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Visual Pimpinan -->
+<div class="lg:col-span-5 order-2 lg:order-1">
+<div class="relative">
+<div class="rounded-2xl overflow-hidden shadow-lg bg-surface-container-high">
+<img class="w-full h-[420px] object-cover" data-alt="Potret bijaksana K.H. Ahmad Syarifuddin pengasuh pesantren berpakaian koko putih rapi bersorban hijau tua dan peci hitam dengan latar rak buku kitab kuning klasik berukir kayu jati, senyum hangat karismatik, pencahayaan studio lembut bernuansa terhormat dan bersahaja." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDD2-sTDDpskAr-1uy5scrmaa-VBsH4fxFtK4uJx93a8HVOLWE7YblokOG_6wh6O_Sv-mwdSl2nTYQQU797qfKrC_HlAOMlNs5XeSx-tf1REZFT9B2i5FZKjRdjW0yN8S7zKRVr51T4NnanOz3deM76ely3fcYcdqU9Q9wHrY6U5Hxoc14yjcZJMlgXPfxMePO1gY04Q8NQRKzF6R1x1ZdGakvD0oOiUf7RTSa80acqYDQqBH3zYt6"/>
+</div>
+<div class="mt-4 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="font-title-md text-title-md font-bold text-primary">K.H. Ahmad Syarifuddin, Lc., M.A.</span>
+<span class="font-label-md text-label-md text-surface-tint uppercase font-semibold">Pimpinan &amp; Pengasuh Pesantren Modern Al-Hikmah</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Alumnus Universitas Al-Azhar Kairo &amp; Pascasarjana UIN Syarif Hidayatullah</span>
+</div>
+</div>
+</div>
+<!-- Sambutan & Trijiwa Content -->
+<div class="lg:col-span-7 order-1 lg:order-2 flex flex-col space-y-space-md">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-slate-tint">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">menu_book</span>
+<span class="font-label-md text-label-md font-bold text-surface-tint uppercase tracking-wide">Prakata Pengasuh</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">
+            "Menjaga Tradisi Luhur Salafus Shalih, Merangkul Kemajuan Peradaban Modern"
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Pesantren Modern Al-Hikmah didirikan atas komitmen kokoh menghadirkan generasi mukmin mutafaqqih fiddin yang berkarakter mandiri, fasih berdialog di kancah global, serta cakap memimpin masa depan bangsa dengan pondasi tauhid yang tak tergoyahkan.
+          </p>
+<!-- Trijiwa Pesantren Cards -->
+<div class="pt-2">
+<div class="font-label-lg text-label-lg uppercase tracking-wider text-primary font-bold mb-3">Trijiwa Nilai Dasar Al-Hikmah:</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-full bg-slate-tint text-surface-tint flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+<h3 class="font-title-md text-body-md font-bold text-primary">Keikhlasan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">Menata segenap amal ibadah dan ikhtiar thalabul ilmi semata mengharap ridha Allah SWT.</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-full bg-slate-tint text-surface-tint flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-[18px]">self_improvement</span>
+</div>
+<h3 class="font-title-md text-body-md font-bold text-primary">Kemandirian</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">Terampil merawat diri, mengelola waktu secara teratur, serta tangguh menghadapi tantangan hidup.</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-full bg-slate-tint text-surface-tint flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+</div>
+<h3 class="font-title-md text-body-md font-bold text-primary">Ukhuwah Islamiyah</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">Menjalin persaudaraan suci antar santri dari Sabang sampai Merauke dalam bingkai rahmatan lil 'alamin.</p>
+</div>
+</div>
+</div>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 font-label-lg text-label-lg font-bold text-surface-tint hover:text-emerald-deep transition-colors" href="#">
+<span>Pelajari Sejarah Selengkapnya</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROGRAM PENDIDIKAN & KURIKULUM -->
+<section class="w-full py-space-xl bg-surface-container-low" id="kurikulum">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-tint mb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">school</span>
+<span class="font-label-md text-label-md font-bold text-surface-tint uppercase tracking-wide">Pilar Keilmuan</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">Program Unggulan Terpadu</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Integrasi harmonis antara keilmuan turots salaf, hafalan Al-Qur'an mutqin, kurikulum formal Kementerian Agama/Kemendikbud, serta kompetensi teknologi modern.
+        </p>
+</div>
+<!-- Grid 4 Program Utama -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- 1. Tahfidz -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-md flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+<div>
+<div class="w-12 h-12 rounded-xl bg-forest-rich/10 text-forest-rich flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">auto_stories</span>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-slate-tint text-surface-tint font-label-md text-label-md font-semibold mb-2">Sanad &amp; Talaqqi</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Tahfidzul Qur'an</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              Target mutqin 30 juz ber-sanad melalui bimbingan masyaikh bersertifikasi, halaqah subuh dan ashar, serta evaluasi tasmi' berkala di hadapan dewan penguji.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t-0 bg-surface-container-low/50 rounded-lg p-3">
+<span class="font-label-md text-label-md font-bold text-primary block">Output Lulusan:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">Syahadah Tahfidz 30 Juz &amp; Sanad Matan Jazariyyah</span>
+</div>
+</div>
+<!-- 2. Kitab Kuning -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-md flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+<div>
+<div class="w-12 h-12 rounded-xl bg-forest-rich/10 text-forest-rich flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">library_books</span>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-slate-tint text-surface-tint font-label-md text-label-md font-semibold mb-2">Dirasah Islamiyah</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Kajian Kitab Salaf</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              Pendalaman gramatika Nahwu-Sharaf (Jurumiyah, Imrithi, Alfiyah Ibnu Malik), Ushul Fiqh, Hadits Arba'in, Riyadlus Shalihin, dan Tauhid Ahlussunnah wal Jama'ah.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t-0 bg-surface-container-low/50 rounded-lg p-3">
+<span class="font-label-md text-label-md font-bold text-primary block">Output Lulusan:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">Kemampuan membaca literatur Arab gundul &amp; istinbath hukum dasar</span>
+</div>
+</div>
+<!-- 3. Pendidikan Formal -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-md flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+<div>
+<div class="w-12 h-12 rounded-xl bg-forest-rich/10 text-forest-rich flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">badge</span>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-slate-tint text-surface-tint font-label-md text-label-md font-semibold mb-2">Akreditasi A Unggul</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Formal Berstandar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              MTs &amp; Madrasah Aliyah (Peminatan IPA, IPS, &amp; Agama) serta SMK IT konsentrasi Rekayasa Perangkat Lunak dan Jaringan Komputer dengan sertifikasi BNSP.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t-0 bg-surface-container-low/50 rounded-lg p-3">
+<span class="font-label-md text-label-md font-bold text-primary block">Output Lulusan:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">Ijazah Negara &amp; Portofolio SNBP/SNBT Perguruan Tinggi Top</span>
+</div>
+</div>
+<!-- 4. Bahasa Asing -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-md flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+<div>
+<div class="w-12 h-12 rounded-xl bg-forest-rich/10 text-forest-rich flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">translate</span>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-slate-tint text-surface-tint font-label-md text-label-md font-semibold mb-2">Bi'ah Lughawiyyah</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Bahasa Internasional</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              Penerapan bahasa Arab dan Inggris secara bergiliran dua mingguan di lingkungan asrama, pidato muhadhoroh tiga bahasa, dan program persiapan tes TOAFL/TOEFL.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t-0 bg-surface-container-low/50 rounded-lg p-3">
+<span class="font-label-md text-label-md font-bold text-primary block">Output Lulusan:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">Kemahiran aktif berpidato, debat, &amp; skor TOEFL/TOAFL tinggi</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FASILITAS & SARANA UNGGULAN -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-tint mb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">apartment</span>
+<span class="font-label-md text-label-md font-bold text-surface-tint uppercase tracking-wide">Infrastruktur Kampus</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">Fasilitas Penunjang Santri</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Dibangun di atas lahan 8 hektar berhawa sejuk pegunungan, menghadirkan kenyamanan studi, kebugaran jasmani, dan kekhusyukan ibadah.
+          </p>
+</div>
+<div class="mt-4 md:mt-0">
+<span class="font-label-md text-label-md text-surface-tint bg-slate-tint px-3 py-1.5 rounded-lg font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified_user</span> Lingkungan Terjaga 24 Jam CCTV &amp; Security
+          </span>
+</div>
+</div>
+<!-- Bento Grid Fasilitas -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Fasilitas 1 -->
+<div class="rounded-2xl overflow-hidden bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="relative h-56 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Masjid Jami' dua lantai berarsitektur modern minimalis dengan karpet hijau zamrud tebal, kubah berukir kaligrafi kontemporer, jendela kaca besar yang menampakkan pohon pinus segar dan cahaya lembut siang hari." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIS2-x1gxFIL0kFh0SQ31ET2Wtie1C1cBm-Z8mogmbx0aqdtucNZMAEwQSOzoEkLWGoyqTmGdAXE0R4-6_I8BIMdgpUx-0Nd_fG0uW7Y6w1tRNgp2BCWsIvlOSaBY3RAyfHTqM2xTvrB8MJcb2fSM44aYmoZ2z4YmhOYrr1pxY6JYvsq_CFh48xnW9IXwn_E6qbXuMjXtyQZS8jxazM7AyycWKvuigc9uG8toFTtaQVNOWLslHebMs"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-primary/90 text-on-primary font-label-md text-label-md font-bold">Kapasitas 1.500 Jamaah</span>
+</div>
+<div class="p-space-md flex flex-col flex-1">
+<h3 class="font-title-md text-title-md font-bold text-primary">Masjid Jami' 2 Lantai</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+              Pusat spiritual pesantren untuk shalat berjamaah 5 waktu, kajian umum bersama para ulama, serta halaqah tahfidz yang sejuk dan luas.
+            </p>
+</div>
+</div>
+<!-- Fasilitas 2 -->
+<div class="rounded-2xl overflow-hidden bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="relative h-56 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Kamar asrama santri yang bersih dan rapi dengan ranjang tingkat kayu kokoh bernuansa modern, loker pribadi terorganisir, sirkulasi udara pegunungan segar dengan pencahayaan hangat alami yang nyaman untuk belajar malam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLDGCbzNWw9pD0VyyEVb4imV3dCNLmTTHQqHXZp5LkTqisIvIyZODqwpa3crCgJzdVJYENxVVAIGj4H3lHLogRpoypmdgNEq3aQuN2g87HZQSN2nOHGVubcczhOmBjX3dfOpTdtnKNlrmPGR8_E9JHxzFPEjNrENTAeJSZouFZNp8HUu1PFvJzwVDZsUh112MZ_j34BJ9N0xKHIKvEcC5XR6S2DGYk1yGD1kX3dIUaHbO8Yjhb0c0p"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-tint text-on-primary font-label-md text-label-md font-bold">Terpisah Putra &amp; Putri</span>
+</div>
+<div class="p-space-md flex flex-col flex-1">
+<h3 class="font-title-md text-title-md font-bold text-primary">Asrama Ventilatif &amp; Nyaman</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+              Dilengkapi ranjang ergonomis, lemari berkunci, kamar mandi dalam bersih, pengawasan wali asrama 24 jam, serta layanan binatu terjadwal.
+            </p>
+</div>
+</div>
+<!-- Fasilitas 3 -->
+<div class="rounded-2xl overflow-hidden bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="relative h-56 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Ruang kelas modern interaktif dengan Interactive Smart TV display di depan kelas, meja kursi ergonomis tertata rapi, santri menyimak materi dengan penuh antusias di ruangan yang terang benderang." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACXcurDURHmghKDuMwqThcBz6C1j7cwOagrY8udw2AyWfriucoVY8d1hRoPIucVgugWmgTYlbPt08zprnYCh4xxsWwE87xouogYDmJZDMRzBfSNCZg5usHlgDCjceFYAZAV0uZw6x2-56FNClDGPLkeeHThK6DaaTtZAytcWPK9QAU-z8C4GAdvz658BRfUmTzs9wzVhyPZa9WPEE49PDWuAFG5OzM2SoDmcnthlmRrSmECtPFAyPO"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-forest-rich text-on-primary font-label-md text-label-md font-bold">Smart Classroom</span>
+</div>
+<div class="p-space-md flex flex-col flex-1">
+<h3 class="font-title-md text-title-md font-bold text-primary">Kelas Multimedia &amp; Smart TV</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+              Setiap ruang kelas didukung smartboard interaktif, akses Wi-Fi edukasi terproteksi, serta pendingin udara untuk efektivitas belajar.
+            </p>
+</div>
+</div>
+<!-- Fasilitas 4 -->
+<div class="rounded-2xl overflow-hidden bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="relative h-56 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Laboratorium komputer modern dengan jajaran monitor komputer seragam, headset audio untuk lab bahasa, serta santri sedang memprogram kode software dan latihan percakapan bahasa Inggris." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgneT_qQVsvfAQUvm__HbPk20p9smI_3uzUchQGCJTJvLe-mUd1OD6Tnt9mzN3Pxkcpq827izYf6PxTlyEKxU1gffm1zBFLtHGXwQIM9ZKpgN4Rn9XauAobloF7p8HkPes34LesOLabkJNds9vBYuSVIE0b4bMthnaBjvgkZU_f7tvwNyaJLLvZz91wL1CFzHLhwsrZ0dx30sTPdR2cOeGkm2Py3scow4V75APixopMNpX5yjtG6tq"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-primary/90 text-on-primary font-label-md text-label-md font-bold">60 Unit PC Core-i7</span>
+</div>
+<div class="p-space-md flex flex-col flex-1">
+<h3 class="font-title-md text-title-md font-bold text-primary">Lab Komputer &amp; Bahasa</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+              Fasilitas penunjang mata pelajaran IT, pemrograman web, robotika, serta audio-booth untuk latihan listening ujian bahasa internasional.
+            </p>
+</div>
+</div>
+<!-- Fasilitas 5 -->
+<div class="rounded-2xl overflow-hidden bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="relative h-56 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Perpustakaan megah tenang dengan ribuan jilid kitab kuning klasik Arab dan literatur ilmiah modern, area baca santai lesehan dengan bean bags dan meja kayu jati, pencahayaan alami hangat dari kaca panorama." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCIDBOtTEBH1gXJVYkqX0UnhNsWVyVZ2grTgyG64fdMBhhdrejureux9PqZCFD5Acpl_wRgiFfc1V2_Eh2KVAjCnQb5Tl-lM91ExYGAEi9Oh6cR0o4fP12mo3BD2bZ66rYcjrmwqzvPCJ9jxUk1cbgXmqr6F1x60RQO1uruVxe3ptLg45ZxcHyZpxuN4P6WBXFK3sAEw14_LB_g_SP9CQSBYO6mGsS35ZDW70Y43eNkKy1BDQeEzs7"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-forest-rich text-on-primary font-label-md text-label-md font-bold">10.000+ Eksemplar</span>
+</div>
+<div class="p-space-md flex flex-col flex-1">
+<h3 class="font-title-md text-title-md font-bold text-primary">Perpustakaan Islam Digital</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+              Koleksi ensiklopedia Islam terlengkap, manuskrip fiqh salaf, serta akses portal e-library jurnal ilmiah nasional dan Timur Tengah.
+            </p>
+</div>
+</div>
+<!-- Fasilitas 6 -->
+<div class="rounded-2xl overflow-hidden bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="relative h-56 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Area olahraga santri terpadu dengan lapangan futsal rumput sintetis hijau dan arena panahan outdoor yang dikelilingi perbukitan hijau asri dengan langit biru cerah di Cisarua Bogor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8u8XH2kJTFk0XtG2yg02J6wmq6_3wAaHGBS6--4c20e1jGnLUFEtUFjJQfWr3Agwiio9yLFbLV_WqYNYDzhvIgXcV0QP8tTf9wpkPZC19AQUr7jlzUqFUot3LT3oKO-bGd5_ADnBGP48OnR8SotdgwMu77BzW-9Rpk0Kc9305WkIWA1T6GxhW9MwMkgug3M5aadb6fNBITkKlPx1Z2K9Ycz3cBcd_mgdtCXabU2N3RE4wyyECxm7e"/>
+<span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-tint text-on-primary font-label-md text-label-md font-bold">Standar Nasional</span>
+</div>
+<div class="p-space-md flex flex-col flex-1">
+<h3 class="font-title-md text-title-md font-bold text-primary">Sport Center &amp; Arena Memanah</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+              Lapangan futsal rumput sintetis, lapangan basket standar, arena panahan sunnah nabawiyyah, dan aula serbaguna beladiri Tapak Suci.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PENDAFTARAN & INFO PSB 2025/2026 -->
+<section class="w-full py-space-xl bg-surface-container-low" id="psb">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-rich/10 text-forest-rich mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">event_available</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wide">Penerimaan Santri Baru (PSB)</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">Alur Pendaftaran &amp; Transparansi Biaya</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Proses seleksi transparan dan sistematis untuk memastikan kesiapan ananda menimba ilmu di asrama Pesantren Modern Al-Hikmah.
+        </p>
+</div>
+<!-- 4 Langkah Alur Pendaftaran -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm relative overflow-hidden flex flex-col">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center font-title-md text-title-md mb-space-sm">
+            1
+          </div>
+<h3 class="font-title-md text-body-md font-bold text-primary">Buat Akun &amp; Form Online</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+            Orang tua mengisi formulir biodata santri secara digital, mengunggah kartu keluarga, akta kelahiran, dan rapor 2 semester terakhir.
+          </p>
+<span class="mt-4 font-label-md text-label-md text-surface-tint font-bold">1 Okt - 20 Des 2024</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm relative overflow-hidden flex flex-col">
+<div class="w-10 h-10 rounded-full bg-forest-rich text-on-primary font-bold flex items-center justify-center font-title-md text-title-md mb-space-sm">
+            2
+          </div>
+<h3 class="font-title-md text-body-md font-bold text-primary">Uji Al-Qur'an &amp; Wawancara</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+            Tes baca Al-Qur'an (tajwid &amp; makhraj), hafalan surat pendek, tes potensi akademik, serta wawancara komitmen orang tua &amp; santri.
+          </p>
+<span class="mt-4 font-label-md text-label-md text-surface-tint font-bold">28 - 29 Des 2024</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm relative overflow-hidden flex flex-col">
+<div class="w-10 h-10 rounded-full bg-surface-tint text-on-primary font-bold flex items-center justify-center font-title-md text-title-md mb-space-sm">
+            3
+          </div>
+<h3 class="font-title-md text-body-md font-bold text-primary">Pengumuman Kelulusan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+            Hasil seleksi diterbitkan secara online via dashboard portal wali santri dan dikirimkan melalui notifikasi resmi WhatsApp.
+          </p>
+<span class="mt-4 font-label-md text-label-md text-surface-tint font-bold">5 Januari 2025</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm relative overflow-hidden flex flex-col">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-primary font-bold flex items-center justify-center font-title-md text-title-md mb-space-sm">
+            4
+          </div>
+<h3 class="font-title-md text-body-md font-bold text-primary">Daftar Ulang &amp; Masuk Asrama</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+            Penyelesaian administrasi biaya, pengukuran seragam, orientasi santri baru (Khutbatul Arsy), dan penempatan kamar asrama.
+          </p>
+<span class="mt-4 font-label-md text-label-md text-surface-tint font-bold">12 - 13 Juli 2025</span>
+</div>
+</div>
+<!-- Transparansi Biaya & Rincian SPP -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Rincian Biaya -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-2xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Rincian Komponen Biaya Investasi Pendidikan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tahun Ajaran 2025/2026 (MTs, MA, &amp; SMK IT)</p>
+</div>
+<span class="px-3 py-1 rounded-full bg-forest-rich/10 text-forest-rich font-label-md text-label-md font-bold hidden sm:inline-block">Transparan &amp; Tanpa Biaya Tersembunyi</span>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-surface-tint text-[20px]">description</span>
+<div>
+<span class="font-title-md text-body-md font-bold text-primary block">Biaya Registrasi &amp; Ujian Seleksi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pendaftaran online, modul tes seleksi, &amp; konsumsi ujian</span>
+</div>
+</div>
+<span class="font-title-md text-body-md font-bold text-primary shrink-0">Rp 450.000</span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-surface-tint text-[20px]">domain</span>
+<div>
+<span class="font-title-md text-body-md font-bold text-primary block">Infaq Pengembangan Gedung &amp; Sarana (Wakaf)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hanya dibayarkan 1x di awal (Bisa dicicil 3x)</span>
+</div>
+</div>
+<span class="font-title-md text-body-md font-bold text-primary shrink-0">Rp 12.500.000</span>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-surface-tint text-[20px]">checkroom</span>
+<div>
+<span class="font-title-md text-body-md font-bold text-primary block">Paket Seragam Lengkap &amp; Buku/Kitab Panduan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5 stel seragam, jas almamater, atribut, Al-Qur'an &amp; kitab pokok</span>
+</div>
+</div>
+<span class="font-title-md text-body-md font-bold text-primary shrink-0">Rp 2.800.000</span>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-surface-tint text-[20px]">local_dining</span>
+<div>
+<span class="font-title-md text-body-md font-bold text-primary block">Iuran Bulanan (SPP &amp; Asrama All-In)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Termasuk makan 3x sehari bergizi, laundry, listrik, air, &amp; klinik kesehatan</span>
+</div>
+</div>
+<span class="font-title-md text-body-md font-bold text-emerald-deep shrink-0">Rp 1.750.000 <span class="font-label-md text-label-md font-normal text-on-surface-variant">/bln</span></span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-3 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-gold-accent text-[18px]">verified</span>
+              Tersedia beasiswa penuh (100% Bebas Biaya) bagi penghafal Al-Qur'an 30 Juz &amp; Yatim Berprestasi.
+            </p>
+<a class="font-label-md text-label-md font-bold text-surface-tint hover:underline shrink-0" href="#">
+              Syarat Beasiswa →
+            </a>
+</div>
+</div>
+<!-- Banner Aksi Pendaftaran -->
+<div class="lg:col-span-4 bg-primary-container text-on-primary rounded-2xl p-space-lg shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-rich/50 backdrop-blur-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-lime-glow">hourglass_top</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wide text-on-primary">Kuota Terbatas</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-ivory-pure">Gelombang 1 Dibuka</h3>
+<p class="font-body-sm text-body-sm text-on-primary/80 mt-2 leading-relaxed">
+              Kapasitas asrama putra: 120 santri. Kapasitas asrama putri: 120 santriwati. Pendaftaran gelombang 1 akan ditutup sewaktu-waktu jika kuota terpenuhi.
+            </p>
+<div class="mt-6 p-4 rounded-xl bg-ivory-pure/10 backdrop-blur-sm space-y-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span>Kuota Terisi:</span>
+<span class="font-bold text-lime-tint">72%</span>
+</div>
+<div class="w-full bg-surface-container/20 rounded-full h-2 overflow-hidden">
+<div class="bg-secondary-fixed h-2 rounded-full w-[72%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg relative z-10 flex flex-col gap-2">
+<a class="w-full h-12 rounded-lg bg-secondary hover:bg-forest-rich text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center shadow-lg transition-all" href="#">
+<span class="material-symbols-outlined mr-2 text-[20px]">edit_note</span>
+              Isi Formulir Pendaftaran Sekarang
+            </a>
+<a class="w-full h-10 rounded-lg bg-ivory-pure/10 hover:bg-ivory-pure/20 text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center transition-all" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank">
+              Konsultasi PSB via WhatsApp
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- GALERI KEGIATAN & BERITA TERKINI -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-tint mb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">newspaper</span>
+<span class="font-label-md text-label-md font-bold text-surface-tint uppercase tracking-wide">Kabar Kampus</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">Aktivitas &amp; Prestasi Santri</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Dokumentasi denyut keseharian, torehan kejuaraan, dan dinamika pembelajaran di bumi Al-Hikmah.
+          </p>
+</div>
+<div class="mt-4 md:mt-0">
+<a class="inline-flex items-center gap-1 font-label-lg text-label-lg font-bold text-surface-tint hover:underline" href="#">
+            Lihat Arsip Galeri Lengkap →
+          </a>
+</div>
+</div>
+<!-- 3 Kartu Berita -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Berita 1 -->
+<div class="rounded-2xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="h-48 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Wisuda Tahfiz akbar santri Al-Hikmah di aula megah, para wisudawan mengenakan jubah putih berselendang hijau tua menerima sertifikat sanad qira'ah dari syekh tamu Timur Tengah." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVDGb1mJuUAyGH_qZGKzX6I6YnpH3JQ9R2o3bEQx9IlduSTjtzBqlxnVubLcM1S5TEjbwGg2a3dqIzLQ8E6kPdwNgKSJ-qsT18PLs2YmqDXMoRzzTvJhe4HlwqRXiAhVdKRh2Fl4W_k6auingimvLRDdrnggvG-WZyh1qw0M8iJxGxnzvNwXlNxLXvezyEDXjC_JMNtl0Q7j_lQBugdnjdoF3FTqkxMejHAsLu-LLJQo-0mJ9ZK4b5"/>
+<span class="absolute bottom-3 left-3 bg-primary/80 backdrop-blur-sm text-on-primary font-label-md text-label-md px-2.5 py-1 rounded-md">Tahfidz Qur'an</span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant">24 Oktober 2024</span>
+<h3 class="font-title-md text-title-md font-bold text-primary mt-1 leading-snug">
+                Haflah Khotmil Qur'an Ke-XII: 48 Santri Resmi Menyandang Syahadah 30 Juz Mutqin
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">
+                Kegiatan khotmil qur'an dihadiri dewan masyaikh dan perwakilan Kemenag Provinsi dengan prosesi tasmi' bil-ghaib 30 juz sekali duduk.
+              </p>
+</div>
+<a class="mt-4 font-label-md text-label-md font-bold text-surface-tint flex items-center gap-1" href="#">
+              Baca Rilis →
+            </a>
+</div>
+</div>
+<!-- Berita 2 -->
+<div class="rounded-2xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="h-48 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Dua santri berkopiah dan jas laboratorium sedang merakit robot sensorik line-follower di atas lintasan arena kompetisi sains dengan memegang piala juara umum perlombaan robotik nasional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUj833DCqnrg57TP9bMjkge13AvQKSvce4SUVGrokb_vy05SHy8OEm4WRtF5AnQrgt-AMwWqKqRNvjBobUk7WGBfh4gWPdZniGYFyzs0PrYnONFG7hxkQfwaJn64MA9GYddOt-sv9zxawDEWUNulWReRiPFV0S0OnWaC5IzbxbDsCOSzwwn8QDyf9G3J6M89s23xncZ6_TE0TAcq571gDLBp71K1FVMus8dCAj21lhMEB0IKmSgfU6"/>
+<span class="absolute bottom-3 left-3 bg-forest-rich/90 backdrop-blur-sm text-on-primary font-label-md text-label-md px-2.5 py-1 rounded-md">Sains &amp; Robotik</span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant">12 November 2024</span>
+<h3 class="font-title-md text-title-md font-bold text-primary mt-1 leading-snug">
+                Tim Robotika SMK IT Al-Hikmah Raih Juara 1 Nasional Islamic Science Expo 2024
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">
+                Inovasi smart-irrigation berbasis internet of things karya santri berhasil mengungguli puluhan prototipe dari berbagai sekolah kejuruan nasional.
+              </p>
+</div>
+<a class="mt-4 font-label-md text-label-md font-bold text-surface-tint flex items-center gap-1" href="#">
+              Baca Rilis →
+            </a>
+</div>
+</div>
+<!-- Berita 3 -->
+<div class="rounded-2xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="h-48 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Atraksi pencak silat tapak suci santri dengan seragam merah dan sabuk kuning melakukan tendangan terbang estetik di lapangan upacara pesona latar bukit pinus berkabut sejuk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD73HJqPmjFGu6HmSF_fOGXn_gmNX-Zslg973EoqI_hoMqLa9IlZvjrKKlPYRV2qGIzxsrP6rnjZtY7tPAxekX_TtijuVbz-Z6aS5R6WAL93fUst5LXzDnKJHjHBHNjxelffPcb_D3j5mCmv4sz0jX-iMh_ndw4QsPK_5qDEVGBTYpAiXX21n75smHW35bflTQcSrMdKriT8zKJY99GKJyzl9l3UGmUAThV0EUQEaPMUvlLisg-gn26"/>
+<span class="absolute bottom-3 left-3 bg-secondary/90 backdrop-blur-sm text-on-primary font-label-md text-label-md px-2.5 py-1 rounded-md">Ekstrakurikuler</span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant">28 November 2024</span>
+<h3 class="font-title-md text-title-md font-bold text-primary mt-1 leading-snug">
+                Kejuaraan Silat Antar Pondok Pesantren se-Jawa Barat Borong 7 Medali Emas
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 line-clamp-2">
+                Kontingen pesilat Tapak Suci Al-Hikmah membuktikan ketangguhan fisik dan sportivitas tinggi dalam ajang bergengsi tahunan.
+              </p>
+</div>
+<a class="mt-4 font-label-md text-label-md font-bold text-surface-tint flex items-center gap-1" href="#">
+              Baca Rilis →
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONI ORANG TUA & ALUMNI BERPRESTASI -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-tint mb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">format_quote</span>
+<span class="font-label-md text-label-md font-bold text-surface-tint uppercase tracking-wide">Bukti Nyata</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">Kata Wali Santri &amp; Jejak Alumni</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Komitmen pendidikan holistik yang berakar pada keteladanan telah mengantar para santri menggapai masa depan mulia.
+        </p>
+</div>
+<!-- Testimoni Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Testimoni 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex text-gold-accent mb-3">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "Perubahan adab dan kemandirian putra kami luar biasa. Baru setahun di Al-Hikmah, setiap pulang liburan ia senantiasa bangun tahajud tanpa dibangunkan dan santun sekali berbicara dengan orang tua."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-space-md mt-space-md border-t-0 bg-surface-container-low/40 p-2.5 rounded-xl">
+<div class="w-10 h-10 rounded-full bg-forest-rich text-on-primary flex items-center justify-center font-bold">
+              IR
+            </div>
+<div>
+<span class="font-title-md text-body-md font-bold text-primary block">Ir. H. Ridwan Mansyur</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Wali Santri Kelas XI MA - Jakarta Selatan</span>
+</div>
+</div>
+</div>
+<!-- Spotlight Alumni 1 (Kairo) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-slate-tint text-surface-tint font-label-md text-label-md font-semibold mb-3">
+              Alumni Spotlight • Kairo, Mesir
+            </div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              "Pondasi nahwu sharaf dan bahasa Arab aktif selama 6 tahun di Al-Hikmah menjadi bekal terbesar saya saat menembus ujian seleksi beasiswa Kemenag ke Fakultas Ushuluddin Universitas Al-Azhar Kairo."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-space-md mt-space-md border-t-0 bg-surface-container-low/40 p-2.5 rounded-xl">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">
+              MA
+            </div>
+<div>
+<span class="font-title-md text-body-md font-bold text-primary block">Muhammad Azka, Lc.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Alumni MA 2020 • Mahasiswa Univ. Al-Azhar Kairo</span>
+</div>
+</div>
+</div>
+<!-- Spotlight Alumni 2 (ITB / PTN) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-slate-tint text-surface-tint font-label-md text-label-md font-semibold mb-3">
+              Alumni Spotlight • Kampus Negeri
+            </div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              "Belajar sains dan hafalan Al-Qur'an ternyata saling menguatkan. Manajemen disiplin asrama melatih fokus saya menghadapi UTBK hingga diterima di Teknik Informatika ITB."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-space-md mt-space-md border-t-0 bg-surface-container-low/40 p-2.5 rounded-xl">
+<div class="w-10 h-10 rounded-full bg-surface-tint text-on-primary flex items-center justify-center font-bold">
+              FZ
+            </div>
+<div>
+<span class="font-title-md text-body-md font-bold text-primary block">Farhan Zulkarnain</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Alumni SMK IT 2021 • Mahasiswa STEI ITB</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ & PANDUAN CEPAT (Accordion Interaktif) -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="text-center mb-space-xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-tint mb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">help_outline</span>
+<span class="font-label-md text-label-md font-bold text-surface-tint uppercase tracking-wide">Tanya Jawab</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Ketahui panduan operasional, tata tertib, dan kebijakan kependidikan sebelum bergabung.
+        </p>
+</div>
+<!-- FAQ List -->
+<div class="space-y-space-sm" id="faq-container">
+<!-- Item 1 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<button class="faq-toggle w-full flex items-center justify-between text-left font-title-md text-title-md font-bold text-primary focus:outline-none" type="button">
+<span>Bagaimana mekanisme seleksi dan materi ujian masuk PSB?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-200 text-surface-tint">keyboard_arrow_down</span>
+</button>
+<div class="faq-content hidden mt-3 pt-3 border-t-0 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+            Materi seleksi terdiri dari 3 tahapan utama: 1) Tes kemampuan membaca Al-Qur'an (makharijul huruf &amp; tajwid dasar) dan hafalan juz 30, 2) Tes Potensi Akademik mencakup Matematika dasar dan Bahasa Indonesia, serta 3) Wawancara psikologi motivasi santri dan komitmen kepesantrenan bersama orang tua/wali.
+          </div>
+</div>
+<!-- Item 2 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<button class="faq-toggle w-full flex items-center justify-between text-left font-title-md text-title-md font-bold text-primary focus:outline-none" type="button">
+<span>Bagaimana jadwal perizinan jenguk orang tua ke pondok?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-200 text-surface-tint">keyboard_arrow_down</span>
+</button>
+<div class="faq-content hidden mt-3 pt-3 border-t-0 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+            Untuk menjaga konsentrasi adaptasi thalabul ilmi, kunjungan orang tua dijadwalkan sebulan sekali pada pekan kedua atau keempat hari Ahad pukul 08.00 - 17.00 WIB di area Gazebo dan Selasar Masjid Jami'. Perizinan kepulangan santri diberikan saat libur semester dan hari raya keagamaan.
+          </div>
+</div>
+<!-- Item 3 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<button class="faq-toggle w-full flex items-center justify-between text-left font-title-md text-title-md font-bold text-primary focus:outline-none" type="button">
+<span>Bagaimana kebijakan penggunaan gawai (gadget &amp; smartphone)?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-200 text-surface-tint">keyboard_arrow_down</span>
+</button>
+<div class="faq-content hidden mt-3 pt-3 border-t-0 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+            Santri tidak diperkenankan membawa smartphone pribadi ke dalam asrama. Pembelajaran berbasis digital dan riset internet difasilitasi penuh di Laboratorium Komputer dan Multimedia di bawah pengawasan instruktur. Komunikasi santri dengan orang tua disediakan melalui saluran telepon asrama terjadwal.
+          </div>
+</div>
+<!-- Item 4 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<button class="faq-toggle w-full flex items-center justify-between text-left font-title-md text-title-md font-bold text-primary focus:outline-none" type="button">
+<span>Apakah ada program beasiswa pendidikan di Al-Hikmah?</span>
+<span class="material-symbols-outlined faq-icon transition-transform duration-200 text-surface-tint">keyboard_arrow_down</span>
+</button>
+<div class="faq-content hidden mt-3 pt-3 border-t-0 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+            Ya, kami membuka Jalur Beasiswa Tahfidz Mutqin (bagi pendaftar yang telah hafal 15-30 juz) serta Beasiswa Kader Ulama &amp; Yatim Dhuafa Berprestasi. Beasiswa mencakup pembebasan biaya gedung hingga 100% biaya SPP dan makan bulanan berdasarkan hasil verifikasi faktual.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- HUBUNGI KAMI & LOKASI KAMPUS -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Informasi Kontak & Jadwal Kunjungan -->
+<div class="lg:col-span-5 flex flex-col justify-between space-y-space-md">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-tint mb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">pin_drop</span>
+<span class="font-label-md text-label-md font-bold text-surface-tint uppercase tracking-wide">Silaturahmi Langsung</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">Kunjungi Kampus Kami</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+              Bapak/Ibu dipersilakan berkunjung untuk melihat langsung kegiatan belajar mengajar, suasana asrama, dan berkonsultasi dengan tim panitia PSB.
+            </p>
+</div>
+<div class="space-y-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-forest-rich/10 text-forest-rich flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div>
+<span class="font-title-md text-body-md font-bold text-primary block">Alamat Kampus Utama</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Jl. Pesantren Luhur No. 99, Cisarua, Bogor, Jawa Barat 16750</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-forest-rich/10 text-forest-rich flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div>
+<span class="font-title-md text-body-md font-bold text-primary block">Waktu Layanan Informasi PSB</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Setiap Hari (Senin - Ahad): 08.00 - 16.00 WIB</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-forest-rich/10 text-forest-rich flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</div>
+<div>
+<span class="font-title-md text-body-md font-bold text-primary block">Hotline WhatsApp Resmi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">+62 812-3456-7890 (Ust. Fauzi / Ustzh. Maryam)</span>
+</div>
+</div>
+</div>
+<div>
+<a class="inline-flex items-center justify-center h-12 px-space-lg rounded-lg bg-secondary hover:bg-forest-rich text-on-primary font-label-lg text-label-lg font-bold shadow-md transition-all" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined mr-2 text-[20px]">forum</span>
+              Hubungi Panitia via WhatsApp
+            </a>
+</div>
+</div>
+<!-- Google Maps View Embed / Location Card -->
+<div class="lg:col-span-7 flex flex-col">
+<div class="w-full h-full min-h-[380px] rounded-2xl overflow-hidden shadow-md relative bg-surface-container">
+<div class="w-full h-full min-h-[380px] bg-cover bg-center rounded-2xl" data-location="Cisarua, Bogor, Jawa Barat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHRyQt0mknyjAedN9j4-XZCwoYjrINW_kkPvTKhPiX_ysqWi0sGIwEHJuraKqGldTgLwHkkFMAY3G-nvgOzyS5d6zStQf20COgbZwNpMV3eeaF5k3qYYpupRJoWeCNiRf15RbcPKrGc3XBkKx96kqRpSRjBwQttfiZ-WxMVKMsyVaaw08sqL8MBErsO9qo-fc1-r261um69iSAVTdG-uEj9CPEhNZrNEySFYzEO_M4mf59_RiS24dz')"></div>
+<!-- Overlay Marker Box -->
+<div class="absolute bottom-4 left-4 right-4 sm:right-auto bg-surface-container-lowest/95 backdrop-blur-md p-4 rounded-xl shadow-lg max-w-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-forest-rich"></span>
+<span class="font-title-md text-body-md font-bold text-primary">Pesantren Modern Al-Hikmah</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Akses mudah via Tol Jagorawi keluar Gerbang Tol Ciawi arah Puncak Cisarua (sekitar 15 menit).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Script Interaktivitas Accordion FAQ -->
+<script>
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.faq-icon');
+        const isOpen = !content.classList.contains('hidden');
+        
+        // Tutup semua FAQ lainnya
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+        
+        // Toggle saat diklik
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-primary text-on-primary pt-space-xl pb-space-lg"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl"><div class="space-y-space-md"><div class="flex items-center gap-space-sm"><div class="p-1.5 rounded-lg bg-surface-container-lowest"><img alt="Logo Pesantren Al-Hikmah" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHSq7xe8QQjep2ZdkmmPeVbPbqKjDUNV-sICI2tZGGu3IiJTtsiDwvuNnqOGyuddtemros2WHN0YfNOISaU2cspAlq1dcwmGZBDkp7E4bdgz4mvgq88u0qx02TM6A4FwYHsUpElzQ7_kKEtUqDn02SF8ZhsdhOZearyM9sAtqHs-kyu6lAJnQ4arLTZ8BufpnjNPJk6Dpf6Jfwwz_qWTf3GPC5DGCzQWZS6Hq5wXFv0gc2KMmppyun"/></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary font-semibold">Al-Hikmah</span><span class="font-label-md text-label-md text-primary-fixed">Modern Islamic Boarding School</span></div></div><p class="font-body-sm text-body-sm text-on-primary/80">Membina generasi qur'ani berakhlak mulia, berwawasan global, dan unggul dalam ilmu agama serta sains teknologi terpadu.</p><div class="p-space-sm rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md"><span class="block font-bold text-on-primary">Legalitas Kemenag RI:</span><span class="block">No. Statistik Pontren: 510032010892</span><span class="block">SK Kemenkumham RI: AHU-0012481.AH.01.04</span></div></div><div class="space-y-space-md"><span class="font-title-md text-title-md text-on-primary block font-semibold">Kurikulum &amp; Program</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-primary/80"><li><a class="hover:text-primary-fixed transition-colors block py-0.5" data-path="program-pendidikan" href="#">Tahfidz Al-Qur'an 30 Juz Mutqin</a></li><li><a class="hover:text-primary-fixed transition-colors block py-0.5" data-path="program-pendidikan" href="#">Dirasah Islamiyah &amp; Kitab Kuning</a></li><li><a class="hover:text-primary-fixed transition-colors block py-0.5" data-path="program-pendidikan" href="#">MTs Unggulan Terakreditasi A</a></li><li><a class="hover:text-primary-fixed transition-colors block py-0.5" data-path="program-pendidikan" href="#">Madrasah Aliyah (MA) Sains &amp; Agama</a></li><li><a class="hover:text-primary-fixed transition-colors block py-0.5" data-path="program-pendidikan" href="#">SMK Teknologi Informasi &amp; Robotika</a></li><li><a class="hover:text-primary-fixed transition-colors block py-0.5" data-path="program-pendidikan" href="#">Program Bahasa Arab &amp; Inggris Aktif</a></li></ul></div><div class="space-y-space-md"><span class="font-title-md text-title-md text-on-primary block font-semibold">Informasi &amp; Panduan</span><ul class="space-y-space-xs font-body-sm text-body-sm text-on-primary/80"><li><a class="hover:text-primary-fixed transition-colors block py-0.5" data-path="info-psb-biaya" href="#">Brosur &amp; Rincian Biaya Pendidikan</a></li><li><a class="hover:text-primary-fixed transition-colors block py-0.5" data-path="info-psb-biaya" href="#">Alur &amp; Syarat Pendaftaran Santri Baru</a></li><li><a class="hover:text-primary-fixed transition-colors block py-0.5" data-path="info-psb-biaya" href="#">Beasiswa Santri Berprestasi &amp; Yatim</a></li><li><a class="hover:text-primary-fixed transition-colors block py-0.5" data-path="fasilitas" href="#">Fasilitas Asrama &amp; Kampus Terpadu</a></li><li><a class="hover:text-primary-fixed transition-colors block py-0.5" data-path="galeri-berita" href="#">Warta Prestasi &amp; Agenda Santri</a></li><li><a class="hover:text-primary-fixed transition-colors block py-0.5" data-path="faq" href="#">Tanya Jawab Seputar Pondok (FAQ)</a></li></ul></div><div class="space-y-space-md"><span class="font-title-md text-title-md text-on-primary block font-semibold">Kampus &amp; Kontak</span><div class="space-y-space-sm font-body-sm text-body-sm text-on-primary/80"><p class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-fixed mt-0.5">location_on</span><span>Jl. Pesantren Luhur No. 99, Cisarua, Bogor, Jawa Barat 16750</span></p><p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-fixed">call</span><span>Hotline PSB: +62 812-3456-7890</span></p><p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-fixed">mail</span><span>sekretariat@alhikmah.sch.id</span></p><p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-fixed">schedule</span><span>Layanan Kunjungan: Setiap Hari 08.00 - 16.00 WIB</span></p></div><div class="pt-space-xs flex items-center gap-space-sm"><a class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center hover:bg-forest-rich transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">forum</span></a><a class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center hover:bg-forest-rich transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">videocam</span></a><a class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center hover:bg-forest-rich transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-primary/70"><p>© 2025 Pesantren Modern Al-Hikmah. Hak Cipta Dilindungi Undang-Undang.</p><div class="flex items-center gap-space-md"><a class="hover:text-primary-fixed transition-colors" data-path="faq" href="#">Kebijakan Privasi</a><span class="opacity-40">•</span><a class="hover:text-primary-fixed transition-colors" data-path="faq" href="#">Tata Tertib Kampus</a><span class="opacity-40">•</span><a class="hover:text-primary-fixed transition-colors" data-path="kontak" href="#">Peta Lokasi</a></div></div></div></footer></body></html>
