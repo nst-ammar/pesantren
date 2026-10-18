@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const steps = [
   {
     numClass: "bg-primary",
@@ -162,13 +164,13 @@ export default function Pendaftaran() {
               </div>
             </div>
             <div className="mt-space-lg relative z-10 flex flex-col gap-2">
-              <a
+              <Link
                 className="w-full h-12 rounded-lg bg-secondary hover:bg-forest-rich text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center shadow-lg transition-all"
-                href="#psb"
+                to="/pendaftaran-online"
               >
                 <span className="material-symbols-outlined mr-2 text-[20px]">edit_note</span>
                 Isi Formulir Pendaftaran Sekarang
-              </a>
+              </Link>
               <a
                 className="w-full h-10 rounded-lg bg-ivory-pure/10 hover:bg-ivory-pure/20 text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center transition-all"
                 href="https://wa.me/6281234567890"

@@ -1,21 +1,22 @@
+import { Link } from "react-router-dom";
 import { images } from "../data/images.js";
 
 const programLinks = [
-  { label: "Tahfidz Al-Qur'an 30 Juz Mutqin", href: "#kurikulum" },
-  { label: "Dirasah Islamiyah & Kitab Kuning", href: "#kurikulum" },
-  { label: "MTs Unggulan Terakreditasi A", href: "#kurikulum" },
-  { label: "Madrasah Aliyah (MA) Sains & Agama", href: "#kurikulum" },
-  { label: "SMK Teknologi Informasi & Robotika", href: "#kurikulum" },
-  { label: "Program Bahasa Arab & Inggris Aktif", href: "#kurikulum" },
+  { label: "Tahfidz Al-Qur'an 30 Juz Mutqin", href: "/#kurikulum" },
+  { label: "Dirasah Islamiyah & Kitab Kuning", href: "/#kurikulum" },
+  { label: "MTs Unggulan Terakreditasi A", href: "/#kurikulum" },
+  { label: "Madrasah Aliyah (MA) Sains & Agama", href: "/#kurikulum" },
+  { label: "SMK Teknologi Informasi & Robotika", href: "/#kurikulum" },
+  { label: "Program Bahasa Arab & Inggris Aktif", href: "/#kurikulum" },
 ];
 
 const infoLinks = [
-  { label: "Brosur & Rincian Biaya Pendidikan", href: "#psb" },
-  { label: "Alur & Syarat Pendaftaran Santri Baru", href: "#psb" },
-  { label: "Beasiswa Santri Berprestasi & Yatim", href: "#psb" },
-  { label: "Fasilitas Asrama & Kampus Terpadu", href: "#fasilitas" },
-  { label: "Warta Prestasi & Agenda Santri", href: "#berita" },
-  { label: "Tanya Jawab Seputar Pondok (FAQ)", href: "#faq" },
+  { label: "Brosur & Rincian Biaya Pendidikan", href: "/#psb" },
+  { label: "Alur & Syarat Pendaftaran Santri Baru", href: "/pendaftaran-online" },
+  { label: "Beasiswa Santri Berprestasi & Yatim", href: "/#psb" },
+  { label: "Fasilitas Asrama & Kampus Terpadu", href: "/#fasilitas" },
+  { label: "Warta Prestasi & Agenda Santri", href: "/#berita" },
+  { label: "Tanya Jawab Seputar Pondok (FAQ)", href: "/#faq" },
 ];
 
 export default function Footer() {
@@ -61,12 +62,12 @@ export default function Footer() {
             <ul className="space-y-space-xs font-body-sm text-body-sm text-on-primary/80">
               {programLinks.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     className="hover:text-primary-fixed transition-colors block py-0.5"
-                    href={link.href}
+                    to={link.href}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -79,12 +80,12 @@ export default function Footer() {
             <ul className="space-y-space-xs font-body-sm text-body-sm text-on-primary/80">
               {infoLinks.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     className="hover:text-primary-fixed transition-colors block py-0.5"
-                    href={link.href}
+                    to={link.href}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -149,17 +150,17 @@ export default function Footer() {
         <div className="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-primary/70">
           <p>© 2025 Pesantren Modern Al-Hikmah. Hak Cipta Dilindungi Undang-Undang.</p>
           <div className="flex items-center gap-space-md">
-            <a className="hover:text-primary-fixed transition-colors" href="#faq">
+            <Link className="hover:text-primary-fixed transition-colors" to="/#faq">
               Kebijakan Privasi
-            </a>
+            </Link>
             <span className="opacity-40">•</span>
-            <a className="hover:text-primary-fixed transition-colors" href="#faq">
+            <Link className="hover:text-primary-fixed transition-colors" to="/#faq">
               Tata Tertib Kampus
-            </a>
+            </Link>
             <span className="opacity-40">•</span>
-            <a className="hover:text-primary-fixed transition-colors" href="#kontak">
+            <Link className="hover:text-primary-fixed transition-colors" to="/#kontak">
               Peta Lokasi
-            </a>
+            </Link>
           </div>
         </div>
       </div>

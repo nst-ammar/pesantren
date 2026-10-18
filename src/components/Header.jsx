@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { images } from "../data/images.js";
 
-// The design marks nav targets with data-path; this build ships the beranda
-// design, so each item anchors to its matching section on this page.
+// Nav items anchor to their matching section on the beranda page.
 const navItems = [
   { path: "beranda", label: "Beranda" },
   { path: "profil", label: "Profil & Sejarah" },
@@ -15,11 +15,18 @@ const navItems = [
 ];
 
 export default function Header() {
+  const { pathname } = useLocation();
+  const onHomePage = pathname === "/";
   const [activePath, setActivePath] = useState("beranda");
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Scroll-spy: highlight the nav item of the section currently in view.
+  // Only meaningful on the beranda page; other pages have no active item.
   useEffect(() => {
+    if (!onHomePage) {
+      setActivePath(null);
+      return;
+    }
     const handleScroll = () => {
       const offset = window.scrollY + 160;
       let current = navItems[0].path;
@@ -35,7 +42,7 @@ export default function Header() {
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [onHomePage]);
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -68,7 +75,7 @@ export default function Header() {
       {/* Main navigation bar */}
       <div className="px-margin-mobile md:px-margin-tablet lg:px-margin">
         <div className="max-w-7xl mx-auto h-20 flex items-center justify-between gap-space-md">
-          <a href="#beranda" className="flex items-center gap-space-md" onClick={closeMenu}>
+          <Link to="/" className="flex items-center gap-space-md" onClick={closeMenu}>
             <img alt="Logo Pesantren Al-Hikmah" className="h-8 w-auto object-contain" src={images.logo} />
             <div className="flex flex-col">
               <span className="font-headline-sm text-headline-sm font-semibold tracking-tight text-primary leading-tight">
@@ -78,13 +85,13 @@ export default function Header() {
                 Al-Hikmah
               </span>
             </div>
-          </a>
+          </Link>
 
           <nav className="hidden xl:flex items-center gap-space-xs font-label-lg text-label-lg">
             {navItems.map((item) => {
               const isActive = activePath === item.path;
               return (
-                <a
+                <Link
                   key={item.path}
                   aria-current={isActive ? "page" : undefined}
                   className={`px-3 py-2 rounded-lg transition-colors ${
@@ -92,20 +99,20 @@ export default function Header() {
                       ? "text-primary font-bold bg-surface-container-high"
                       : "text-on-surface-variant hover:text-primary"
                   }`}
-                  href={`#${item.path}`}
+                  to={`/#${item.path}`}
                 >
                   {item.label}
-                </a>
+                </Link>
               );
             })}
           </nav>
           <div className="flex items-center gap-space-md">
-            <a
+            <Link
               className="hidden sm:inline-flex items-center justify-center h-10 px-space-lg rounded-lg bg-forest-rich hover:bg-emerald-deep text-on-primary font-label-lg text-label-lg font-semibold shadow-[0_4px_14px_rgba(0,75,35,0.2)] transition-all hover:shadow-[0_6px_20px_rgba(0,100,0,0.3)]"
-              href="#psb"
+              to="/pendaftaran-online"
             >
               Daftar PSB Online
-            </a>
+            </Link>
             <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
               <span className="material-symbols-outlined text-on-primary text-[18px]">person</span>
             </div>
@@ -132,27 +139,27 @@ export default function Header() {
             {navItems.map((item) => {
               const isActive = activePath === item.path;
               return (
-                <a
+                <Link
                   key={item.path}
                   className={`px-3 py-2.5 rounded-lg transition-colors ${
                     isActive
                       ? "text-primary font-bold bg-surface-container-high"
                       : "text-on-surface-variant hover:text-primary"
                   }`}
-                  href={`#${item.path}`}
+                  to={`/#${item.path}`}
                   onClick={closeMenu}
                 >
                   {item.label}
-                </a>
+                </Link>
               );
             })}
-            <a
+            <Link
               className="mt-2 mb-1 inline-flex items-center justify-center h-11 px-space-lg rounded-lg bg-forest-rich text-on-primary font-semibold"
-              href="#psb"
+              to="/pendaftaran-online"
               onClick={closeMenu}
             >
               Daftar PSB Online
-            </a>
+            </Link>
           </nav>
         </div>
       )}
